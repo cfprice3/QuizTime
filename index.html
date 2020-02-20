@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="page">Quiz Time for Coders!</title>
+<!--Link to bootstrap CSS and JS styling-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!--Link to my css stylesheet-->
+<link rel="stylesheet" href="assets/style.css" />
+  
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <a class="highscore col-2" href="highscore.html">
+                <h3>Click for Highscores</h3>
+            </a>
+            <div class="col-9"></div>
+            <h3 id="timeDisplay" class="col-md-1">Time: <span id="timer">0</span></h3>
+        </div>
+        
+        <div class="content center" id="theContent">
+    
+            <h1 class="intro main">Coding Quiz Challenge</h1>
+            <h2 id="question" class="quiz"></h2>
+            <div class="left">
+                
+                <div class row>
+                    <div class="col-md-9">
+                <button type="button" onclick="answerCheck(this.id)" id="answer1" class="quiz btn btn-info"></button>
+                    </div>
+                    <div class="col-md-9">
+                <button type="button" onclick="answerCheck(this.id)" id="answer2" class="quiz btn btn-info"></button>
+                    </div>
+                </div>
+                <div class row>
+                    <div class="col-md-9">
+                <button type="button" onclick="answerCheck(this.id)" id="answer3" class="quiz btn btn-info"></button>
+                    </div>
+                    <div class="col-md-9">
+                <button type="button" onclick="answerCheck(this.id)" id="answer4" class="quiz btn btn-info"></button>
+                    </div>
+                </div>    
+                  
+                <br>
+              
+                <h3 id="response"></h3>
+            </div>
+            <h3 class="intro main">Time for a short quiz to test your coding knowledge!  Answer the series of questions
+                 in the time alotted by the timer in the top right corner.  If you answer wrong, time and points will be deducted.
+                 Good luck and have fun!  Don't forget to add your initials to the highscores page at the end.</p>
+                <button id="startBtn" type="button" onclick="quizStart();" class="main btn btn-info">Start Quiz</button>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+    
+    </html>
